@@ -4,13 +4,15 @@ const bookSchema = new mongoose.Schema({
   bookName: {
     type: String,
     unique: true,
-    require: true,
+    required: [true, "Book name is srequired!"],
   },
   bookPrice: {
     type: String,
+    required: [true, "Book price is srequired!"],
   },
   isbnNumber: {
     type: Number,
+    required: [true, "Isbn number is required"],
   },
   authorName: {
     type: String,
